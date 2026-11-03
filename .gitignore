@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Local lockfiles can contain private package mirror URLs.
+uv.lock

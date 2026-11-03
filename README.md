@@ -100,3 +100,14 @@ as JSON from the Report tab; results retain the submitted input snapshot.
 
 Use the same currency for all monetary inputs. This model uses synthetic data
 and is a demonstration, not a validated lending decision system.
+
+## Streamlit Community Cloud
+
+Deploy branch `main` with `main.py` as the entry point and Python 3.13.
+Include `ML/credit_risk_model.pkl` in the repository.
+
+Cloud deployment installs dependencies from `requirements.txt` using public
+PyPI. Do not commit a locally generated `uv.lock` containing private package
+mirror URLs: those hosts are not accessible from Streamlit Cloud. The local
+lockfile is ignored for this reason. After pushing dependency changes, reboot
+the app in Streamlit Cloud if it does not rebuild automatically.
